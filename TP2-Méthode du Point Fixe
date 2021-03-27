@@ -1,0 +1,142 @@
+"""Ma123-TP2-Ding Joel_Augustin Guichardon_1PD2
+   Méthode du point fixe"""
+
+
+#IMPORT
+
+from math import *
+
+#Fonction:
+    
+def PointFixe(g,x0,epsilon,NiterMax):
+    n=1 
+    xold=x0
+    erreur= g(xold) - xold
+    xnew=g(xold) 
+    while abs(erreur) >= epsilon and n < NiterMax:
+        n = n+1
+        xnew=g(xold)
+        erreur =(xnew-xold)
+        xold=xnew
+    return(xnew,n,abs(xnew-xold))
+
+    
+#Question 1: Methode du Point Fixe
+
+def g1plus(x):
+    return(9-3*x)**0.25 
+
+aplus = PointFixe(g1plus,0,1E-10,1E4)
+print(aplus)
+
+
+def g1neg(x):
+    return -(9-3*x)**0.25
+
+aneg = PointFixe(g1neg,0,1E-10,1E4)
+print(aneg)
+print("="*10)
+
+
+#Question 2: Methode du point fixe
+
+def g2plus(x):
+    return acos((2+x)/3)
+
+bplus= PointFixe(g2plus,0,1E-10,1E4)
+print(bplus)
+
+
+
+def g2neg(x):
+    return -(acos((2+x)/3))
+
+bneg= PointFixe(g2neg,0,1E-10,1E4)
+print(bneg)
+print("="*10)
+
+#Question 3: Methode du point fixe
+
+def g3(x):
+    return log(7/x)
+
+c= PointFixe(g3,1,1E-10,1E4)
+print(c)
+print("="*10)
+
+#Question 4: Methode du point fixe
+
+def g4neg(x):
+    return (exp(x)-10)
+
+dneg= PointFixe(g4neg,1,1E-10,1E4)
+print(dneg)
+
+def g4plus(x):
+    return log(10+x)
+
+dplus= PointFixe(g4plus,1,1E-10,1E4)
+print(dplus)
+
+print("="*10)
+
+#Question 5: Methode du point fixe
+
+def g5(x):
+    return  atan(((x+5)/2))
+
+e=PointFixe(g5,0,1E-10,1E4)
+print(e)
+
+print("="*10)
+
+#Question 6: Methode du point fixe
+
+def g6(x):
+    return log((x**2.0)+3)
+
+f=PointFixe(g6,0,1E-10,1E4)
+print(f)
+
+print("="*10)
+#Question 7: Methode du point fixe
+
+def g7(x):
+    return (7-4*log(x))/3
+
+g=PointFixe(g7,1,1E-10,1E4)
+print(g)
+
+print("="*10)
+#Question 8: Methode du point fixe
+
+def g8plus(x):
+    return ((2*(x**2)-(4*x)+17)**0.25)
+hplus=PointFixe(g8plus,0,1E-10,1E4)
+print(hplus)
+
+def g8neg(x):
+    return -((2*(x**2)-(4*x)+17)**0.25)
+hneg=PointFixe(g8neg,0,1E-10,1E4)
+print(hneg)
+
+print("="*10)
+
+#Question 9: Methode du point fixe
+
+def g9(x):
+    return log(2*sin(x)+7)
+i=PointFixe(g9,0,1E-10,1E4)
+print(i)
+
+print("="*10)
+
+#Question 10: Methode du point fixe
+
+def g10(x):
+    return log(10)-log(log(x**2+4))
+j=PointFixe(g10,0,1E-10,1E4)
+print(j)
+
+
+
