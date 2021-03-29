@@ -1,0 +1,180 @@
+"""Ma123-TP3-Ding Joel_Augustin Guichardon_1PD2
+   Méthode du point fixe"""
+
+#IMPORT
+
+from math import *
+
+#Fonction: Newton
+
+def Newton(f,fprim,x0,epsilon,NiterMax):
+    n=1 
+    xold=x0
+    xnew=xold-(f(xold))/(fprim(xold))
+    erreur= xnew - xold
+    while abs(erreur) >= epsilon and n < NiterMax:
+        n = n+1
+        xnew=xold-(f(xold))/(fprim(xold)) 
+        erreur =(xnew-xold)
+        xold=xnew
+    return(xnew,n,abs(xnew-xold))
+
+#f(x):
+
+def f1(x):
+    return x**4 + 3*x - 9
+
+def f2(x):
+    return x - 3*cos(x) + 2
+
+def f3(x):
+    return x*exp(x) - 7
+
+def f4(x):
+    return exp(x) - x - 10
+
+def f5(x):
+    return 2*tan(x) - x - 5
+
+def f6(x):
+    return exp(x)- x**2 - 3
+
+def f7(x):
+    return 3*x + 4*log(x) - 7
+
+def f8(x):
+    return  x**4 - 2*(x**2) + 4*x - 17
+
+def f9(x):
+    return exp(x) - 2*sin(x) - 7
+
+def f10(x):
+    return (log(x**2 + 4))*exp(x) - 10
+
+#fprim(x):
+    
+def f1prim(x):
+    return 4*(x**3)+3
+
+def f2prim(x):
+    return 1+3*sin(x)
+
+def f3prim(x):
+    return exp(x)*(x+1)
+
+def f4prim(x):
+    return exp(x)-1
+
+def f5prim(x):
+    return (2/(cos(x)**2))-1
+
+def f6prim(x):
+    return exp(x)-2*x
+
+def f7prim(x):
+    return 3 + (4/x)
+
+def f8prim(x):
+    return 4*(x**3)-4*x+4
+
+def f9prim(x):
+    return exp(x)-2*cos(x)
+
+def f10prim(x):
+    return ((2*x)/(x**2+4))*exp(x) + exp(x)*(log(x**2+4))
+
+#Question 1: Methode de Newton
+
+print("Newton:\n")
+
+print("Question 1")
+aplus = Newton(f1,f1prim,0,1E-10,1E4)
+print(aplus)
+
+aneg = Newton(f1,f1prim,-1,1E-10,1E4)
+print(aneg)
+
+print("="*10)
+
+#Question 2: Methode de Newton
+
+print("Question 2")
+bplus= Newton(f2,f2prim,0,1E-10,1E4)
+print(bplus)
+
+bneg1= Newton(f2,f2prim,-1,1E-10,1E4)
+print(bneg1)
+
+bneg2= Newton(f2,f2prim,-4,1E-10,1E4)
+print(bneg2)
+
+print("="*10)
+
+#Question 3: Methode de Newton
+
+print("Question 3")
+c = Newton(f3, f3prim,2, 1E-10, 1E4)
+print(c)
+
+print("="*10)
+
+#Question 4: Methode de Newton
+
+print("Question 4")
+dplus = Newton(f4, f4prim, 3, 1E-10, 1E4)
+print(dplus)
+dneg = Newton(f4, f4prim, -11, 1E-10, 1E4)
+print(dneg)
+
+print("="*10)
+
+#Question 5: Methode de Newton
+
+print("Question 5")
+e = Newton(f5, f5prim, -6, 1E-10, 1E4)
+print(e)
+
+print("="*10)
+
+#Question 6: Methode de Newton
+
+print("Question 6")
+f = Newton(f6, f6prim, 2, 1E-10, 1E4)
+print(f)
+
+print("="*10)
+
+#Question 7: Methode de Newton
+
+print("Question 7")
+g = Newton(f7, f7prim, 3, 1E-10, 1E4)
+print(g)
+
+print("="*10)
+
+#Question 8: Methode de Newton
+
+print("Question 8")
+hneg = Newton(f8, f8prim, -3, 1E-10, 1E4)
+print(hneg)
+hplus = Newton(f8, f8prim, 3, 1E-10, 1E4)
+print(hplus)
+
+print("="*10)
+
+#Question 9: Methode de Newton
+
+print("Question 9")
+i = Newton(f9, f9prim, 3, 1E-10, 1E4)
+print(i)
+
+print("="*10)
+
+#Question 10: Methode de Newton
+
+print("Question 10")
+j = Newton(f10, f10prim, 3, 1E-10, 1E4)
+print(j)
+
+print("="*40)
+
