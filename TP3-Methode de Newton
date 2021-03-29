@@ -113,7 +113,7 @@ print("="*10)
 #Question 3: Methode de Newton
 
 print("Question 3")
-c = Newton(f3, f3prim,2, 1E-10, 1E4)
+c = Newton(f3, f3prim,1, 1E-10, 1E4)
 print(c)
 
 print("="*10)
@@ -121,9 +121,9 @@ print("="*10)
 #Question 4: Methode de Newton
 
 print("Question 4")
-dplus = Newton(f4, f4prim, 3, 1E-10, 1E4)
+dplus = Newton(f4, f4prim, 1, 1E-10, 1E4)
 print(dplus)
-dneg = Newton(f4, f4prim, -11, 1E-10, 1E4)
+dneg = Newton(f4, f4prim, -1, 1E-10, 1E4)
 print(dneg)
 
 print("="*10)
@@ -131,7 +131,7 @@ print("="*10)
 #Question 5: Methode de Newton
 
 print("Question 5")
-e = Newton(f5, f5prim, -6, 1E-10, 1E4)
+e = Newton(f5, f5prim, -1, 1E-10, 1E4)
 print(e)
 
 print("="*10)
@@ -139,7 +139,7 @@ print("="*10)
 #Question 6: Methode de Newton
 
 print("Question 6")
-f = Newton(f6, f6prim, 2, 1E-10, 1E4)
+f = Newton(f6, f6prim, 0, 1E-10, 1E4)
 print(f)
 
 print("="*10)
@@ -147,7 +147,7 @@ print("="*10)
 #Question 7: Methode de Newton
 
 print("Question 7")
-g = Newton(f7, f7prim, 3, 1E-10, 1E4)
+g = Newton(f7, f7prim, 1, 1E-10, 1E4)
 print(g)
 
 print("="*10)
@@ -157,7 +157,7 @@ print("="*10)
 print("Question 8")
 hneg = Newton(f8, f8prim, -3, 1E-10, 1E4)
 print(hneg)
-hplus = Newton(f8, f8prim, 3, 1E-10, 1E4)
+hplus = Newton(f8, f8prim, 0, 1E-10, 1E4)
 print(hplus)
 
 print("="*10)
@@ -165,7 +165,7 @@ print("="*10)
 #Question 9: Methode de Newton
 
 print("Question 9")
-i = Newton(f9, f9prim, 3, 1E-10, 1E4)
+i = Newton(f9, f9prim, 0, 1E-10, 1E4)
 print(i)
 
 print("="*10)
@@ -173,7 +173,7 @@ print("="*10)
 #Question 10: Methode de Newton
 
 print("Question 10")
-j = Newton(f10, f10prim, 3, 1E-10, 1E4)
+j = Newton(f10, f10prim, 0, 1E-10, 1E4)
 print(j)
 
 print("="*40)
