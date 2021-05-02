@@ -293,7 +293,6 @@ print("Point Fixe:")
 a = PointFixe(g, 0, 1E-10, 1E4)
 print(a)
 
-
 print("="*25)
 
 print("Newton:")
@@ -311,6 +310,70 @@ print("="*25)
 print("Secante:")
 d = Secante(f, 0, 1, 1E-10, 1E4)
 print(d)
+
+print("="*40)
+
+##Exercice 3:
+print("Exercice 3:\n")
+
+print("Dichotomie:")
+
+a1 = Dichotomie(f3, 1, 2, 1E-10, 1E4)
+print("Question 3:",a1)
+b1 = Dichotomie(f6, 1, 2, 1E-10, 1E4)
+print("Question 6:",b1)
+c1 = Dichotomie(f7, 1, 2, 1E-10, 1E4)
+print("Question 7:",c1)
+d1 = Dichotomie(f9, 1, 2, 1E-10, 1E4)
+print("Question 9:",d1)
+e1 = Dichotomie(f10, 1, 2, 1E-10, 1E4)
+print("Question 10:",e1)
+
+print("="*25)
+
+print("Secante:")
+
+a2 = Secante(f3, 1, 2, 1E-10, 1E4)
+print("Question 3:",a2)
+b2 = Secante(f6, 1, 2, 1E-10, 1E4)
+print("Question 6:",b2)
+c2 = Secante(f7, 1, 2, 1E-10, 1E4)
+print("Question 7:",c2)
+d2 = Secante(f9, 1, 2, 1E-10, 1E4)
+print("Question 9:",d2)
+e2 = Secante(f10,1,2, 1E-10, 1E4)
+print("Question 10:",e2)
+
+print("="*25)
+
+print("Newton:")
+
+a3 = Newton(f3, f3prim,1, 1E-10, 1E4)
+print("Question 3:",a3)
+b3 = Newton(f6, f6prim,1, 1E-10, 1E4)
+print("Question 6:",b3)
+c3 = Newton(f7, f7prim,1, 1E-10, 1E4)
+print("Question 7:",c3)
+d3 = Newton(f9, f9prim,1, 1E-10, 1E4)
+print("Question 9:",d3)
+e3 = Newton(f10, f10prim,1, 1E-10, 1E4)
+print("Question 10:",e3)
+
+
+print("="*25)
+
+print("Point Fixe:")
+
+a4=PointFixe(g3,1,1E-10,1E4)
+print("Question 3:",a4)
+b4=PointFixe(g6,1,1E-10,1E4)
+print("Question 6:",b4)
+c4=PointFixe(g7,1,1E-10,1E4)
+print("Question 7:",c4)
+d4=PointFixe(g9,1,1E-10,1E4)
+print("Question 9:",d4)
+e4=PointFixe(g10,1,1E-10,1E4)
+print("Question 10:",e4)
 
 
 """Partie Matplotlib"""
@@ -350,7 +413,7 @@ plt.title("Comparaison de l'équation de l'exercice 2 pour les 4 méthodes")
 plt.ylabel("Evolution de l'erreur \n (échelle linéaire)")
 plt.legend()
 
-#Exercice 3:
+#Exercice 3(Suite):
 
 #Question 3: Comparaison des Methodes    
 
